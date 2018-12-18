@@ -1,0 +1,30 @@
+# maintainer mauruco@gmail.com
+version: '3'
+services:
+  web:
+    container_name: demo_1
+    hostname: demo_1
+    tty: true
+    stdin_open: true
+    entrypoint: docker-config/entrypoint.sh
+    image: ubuntu:18.04
+    ports:
+        - 8080:8080
+    volumes:
+      - .:/var/www/html
+    working_dir: /var/www/html
+    
+    depends_on:
+      - db
+    links:
+      - db
+  db:
+    container_name: db_1
+    build:
+      context: ./
+      dockerfile: mysql.dockerfile
+    image: mysql:mcb01
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'

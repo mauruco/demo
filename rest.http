@@ -1,0 +1,71 @@
+# maintainer mauruco@gmail.com
+@apiUrl = http://localhost:8080/api
+@token = Bearer ZByZmF8fC6bfuESoWJHGssKDlpiFEoeBcTOXaGmQpIxbI2R3HIqNtbETyECa
+
+### VIEW
+GET http://localhost:8080
+
+### LOGIN REGISTER
+POST {{apiUrl}}/register
+content-type: application/json
+Accept: application/json
+
+{
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password": "123qwe.",
+    "password_confirmation": "123qwe."
+}
+
+### LOGIN
+POST {{apiUrl}}/login
+content-type: application/json
+Accept: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123qwe."
+}
+
+### LOGOUT
+POST {{apiUrl}}/logout
+Authorization: {{token}}
+
+### COURSE POST CREATE
+POST {{apiUrl}}/course
+content-type: application/json
+Accept: application/json
+Authorization: {{token}}
+
+{
+    "course": "Curso e",
+    "text": "Texto",
+    "categories": [1,2,3]
+}
+
+### COURSE POST UPDATE
+PUT {{apiUrl}}/course/2
+content-type: application/json
+Accept: application/json
+Authorization: {{token}}
+
+{
+    "course": "Curso z",
+    "text": "Texto",
+    "categories": [1,2,4]
+}
+
+### COURSE GET RETRIVE
+GET {{apiUrl}}/course/15
+Accept: application/json
+Authorization: {{token}}
+
+### COURSE DELETE DELETE
+DELETE {{apiUrl}}/course/1
+Accept: application/json
+Authorization: {{token}}
+
+### COURSE GET RETRIVE ALL
+GET {{apiUrl}}/course
+Accept: application/json
+Authorization: {{token}}

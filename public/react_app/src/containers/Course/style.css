@@ -1,0 +1,12 @@
+.course {
+  display: block;
+  margin-top: 40px;
+}
+.course .actions {
+  position: absolute;
+  top: 120px;
+  right: 10px;
+}
+.course .add-action{
+  margin-top: 20px;
+}

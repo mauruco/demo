@@ -1,0 +1,25 @@
+.home-card .card {
+  height: 140px;
+  background-color: '#EEEEEE';
+}
+.home-card div[class*=MuiTypography-root] {
+  width: 100%;
+}
+.home-card span.force-width {
+  display: inline-block;
+  width: 340px;
+  line-height: 0;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+.home-card div[class*=MuiPaper] button div p[class*=MuiTypography] {
+  min-height: 130px;
+}
+.home-card div[class*=jss167] button div p[class*=jss200] {
+  min-height: 130px;
+}
+.home-card .edit {
+  margin-right: 10px;
+}

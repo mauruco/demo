@@ -1,0 +1,29 @@
+html, body {
+  background-color: #FAFAFA;
+}
+.wrapper{
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.relative {
+  position: relative;
+}
+.width100 {
+  width: 100%;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+.clear-both {
+  clear: both;
+}
+.force-modal-width {
+  display: inline-block;
+  width: 550px;
+  height: 1px;
+  line-height: 0;
+  background-color: transparent;
+}
